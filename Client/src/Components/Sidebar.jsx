@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useAppContext } from "../Context/AppContext";
 import { assets } from "../assets/assets";
-import momennt from "moment";
+import moment from "moment";
 
 function Sidebar({isMenuOpen,setIsMenuOpen}) {
-  const { chats, setSelectedChat, theme, SetTheme, user, navigate } =
+  const { chats, SetSelectedChat, theme, SetTheme, user, navigate } =
     useAppContext();
   const [search, setSearch] = useState("");
 
@@ -48,6 +48,7 @@ function Sidebar({isMenuOpen,setIsMenuOpen}) {
           )
           .map((chat) => (
             <div
+              onClick={()=>{navigate('/'); SetSelectedChat(chat);setIsMenuOpen(false)}}
               key={chat._id}
               className="p-2 px-4 dark:bg-[#57317C]/10 border border-gray-300 dark:border-[#80609F]/15 rounded-md cursor-pointer flex justify-between group"
             >
@@ -58,7 +59,7 @@ function Sidebar({isMenuOpen,setIsMenuOpen}) {
                     : chat.name}
                 </p>
                 <p className="text-xs text-gray-500 dark:text-[#B1A6C0]">
-                  {momennt(chat.updatedAt).fromNow()}
+                  {moment(chat.updatedAt).fromNow()}
                 </p>
               </div>
               <img
@@ -75,6 +76,7 @@ function Sidebar({isMenuOpen,setIsMenuOpen}) {
       <div
         onClick={() => {
           navigate("/community");
+          setIsMenuOpen(false)
         }}
         className="flex items-center gap-2 p-3 mt-4 border border-gray-300 dark:border-white/15 rounded-md cursor-pointer hover:scale-103 transition-all"
       >
@@ -93,6 +95,7 @@ function Sidebar({isMenuOpen,setIsMenuOpen}) {
       <div
         onClick={() => {
           navigate("/credits");
+          setIsMenuOpen(false)
         }}
         className="flex items-center gap-2 p-3 mt-4 border border-gray-300 dark:border-white/15 rounded-md cursor-pointer hover:scale-103 transition-all"
       >
