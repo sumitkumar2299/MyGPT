@@ -3,13 +3,13 @@ import { useAppContext } from "../Context/AppContext";
 import { assets } from "../assets/assets";
 import momennt from "moment";
 
-function Sidebar() {
+function Sidebar({isMenuOpen,setIsMenuOpen}) {
   const { chats, setSelectedChat, theme, SetTheme, user, navigate } =
     useAppContext();
   const [search, setSearch] = useState("");
 
   return (
-    <div className="flex flex-col h-screen min-w-72 p-5 dark:bg-gradient-to-b from-[#242124]/30 to-[#000000]/30 border-r border-[#80609F]/30 backdrop-blur-3xl transition-all duration-500 max:md:absolute left-0 z-1">
+    <div className={`flex flex-col h-screen min-w-72 p-5 dark:bg-gradient-to-b from-[#242124]/30 to-[#000000]/30 border-r border-[#80609F]/30 backdrop-blur-3xl transition-all duration-500 max-md:absolute left-0 z-1 ${!isMenuOpen && 'max-md:-translate-x-full'}`}>
       {/* logo */}
       <img
         src={theme === "dark" ? assets.logo_full : assets.logo_full_dark}
@@ -49,7 +49,7 @@ function Sidebar() {
           .map((chat) => (
             <div
               key={chat._id}
-              className="p-2 px-4 dark:bg-[#57317C]/10 border border-gray-300 drak:border-[#80609F]/15 rounded-md cursor-pointer flex justify-between group"
+              className="p-2 px-4 dark:bg-[#57317C]/10 border border-gray-300 dark:border-[#80609F]/15 rounded-md cursor-pointer flex justify-between group"
             >
               <div>
                 <p className="truncate w-full">
@@ -152,7 +152,7 @@ function Sidebar() {
 
 
 
-      <img src={assets.close_icon} className="absolute top-3 right-3 w-5 h-5 cursor-pointer md:hidden not-dark:invert" alt="" />
+      <img onClick={()=> setIsMenuOpen(false)} src={assets.close_icon} className="absolute top-3 right-3 w-5 h-5 cursor-pointer md:hidden not-dark:invert" alt="" />
 
     
 
