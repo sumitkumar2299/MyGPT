@@ -86,7 +86,7 @@ function Sidebar({isMenuOpen,setIsMenuOpen}) {
           alt=""
         />
         <div className="flex flex-col text-sm">
-          <p>community pages</p>
+          <p>community Images</p>
         </div>
       </div>
 
