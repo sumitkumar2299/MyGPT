@@ -283,46 +283,46 @@ export const dummyChats = [
 export const dummyPublishedImages = [
     {
         "imageUrl": ai_image11,
-        "userName": "GreatStack"
+        "userName": "Sumit"
     },
     {
         "imageUrl": ai_image10,
-        "userName": "GreatStack"
+        "userName": "Rahul"
     },
     {
         "imageUrl": ai_image9,
-        "userName": "GreatStack"
+        "userName": "Mohan"
     },
     {
         "imageUrl": ai_image8,
-        "userName": "GreatStack"
+        "userName": "Shyam"
     },
     {
         "imageUrl": ai_image7,
-        "userName": "GreatStack"
+        "userName": "Ram"
     },
     {
         "imageUrl": ai_image6,
-        "userName": "GreatStack"
+        "userName": "Ratan"
     },
     {
         "imageUrl": ai_image5,
-        "userName": "GreatStack"
+        "userName": "raushan"
     },
     {
         "imageUrl": ai_image4,
-        "userName": "GreatStack"
+        "userName": "gaurav"
     },
     {
         "imageUrl": ai_image3,
-        "userName": "GreatStack"
+        "userName": "krishna"
     },
     {
         "imageUrl": ai_image2,
-        "userName": "GreatStack"
+        "userName": "Amrit"
     },
     {
         "imageUrl": ai_image1,
-        "userName": "GreatStack"
+        "userName": "Rahul"
     }
 ]
