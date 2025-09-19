@@ -17,7 +17,7 @@ function Credits() {
   if (loading) return <Loading />;
   return (
     <div className="max-w-7xl h-screen overflow-y-scroll mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h2 className="text-3xl font-semibold text-center mb-10 xl:mt-[30px] text-gray-800 dark:text-white">
+      <h2 className="text-3xl font-semibold text-center mb-10 xl:mt-[30px] text-gray-799 dark:text-white">
         Credit Plans
       </h2>
 
